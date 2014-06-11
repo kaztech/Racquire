@@ -26,7 +26,7 @@ gem 'bootstrap-sass'
 gem 'devise', '~> 3.2.4'
 gem 'paperclip', '~> 3.0'
 gem 'masonry-rails', '~> 0.2.0'
-
+gem 'bcrypt-ruby','~> 3.1.5'
 
 group :development, :test do 
 	gem 'sqlite3'
