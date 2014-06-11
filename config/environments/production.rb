@@ -83,6 +83,6 @@ Rails.application.configure do
 
   #Required for heroku
   #Note to set this to actual host name
-  config.action_mailer.default_url_options = { host: 'racquire.com' }
+  config.action_mailer.default_url_options = { host: 'http://www.racquire.com' }
 
 end
