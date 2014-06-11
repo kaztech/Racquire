@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   devise_for :users
   devise_for :models
   root "pages#home"
-  get "about" => "pages#about" #creates about path
+  get "recruiter" => "pages#recruiter" #creates recruiter path
+  get "employer" => "pages#employer" #creates employer  path
+  get "postings" => "pages#postings" #creates postings path
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
