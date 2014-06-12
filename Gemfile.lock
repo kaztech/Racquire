@@ -185,6 +185,7 @@ DEPENDENCIES
   jquery-turbolinks
   linkedin
   masonry-rails (~> 0.2.0)
+  oauth2 (~> 0.9.4)
   omniauth
   omniauth-facebook
   omniauth-google-oauth2
