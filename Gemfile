@@ -29,6 +29,7 @@ gem 'masonry-rails', '~> 0.2.0'
 gem 'bcrypt-ruby','~> 3.1.5'
 
 gem 'oauth2', '~> 0.9.4'
+gem 'omniauth-google-oauth2'
 
 group :development, :test do 
 	gem 'sqlite3'
