@@ -28,8 +28,14 @@ gem 'paperclip', '~> 3.0'
 gem 'masonry-rails', '~> 0.2.0'
 gem 'bcrypt-ruby','~> 3.1.5'
 
+gem 'omniauth'
 gem 'oauth2', '~> 0.9.4'
 gem 'omniauth-google-oauth2'
+gem 'linkedin'
+gem 'omniauth-facebook'
+
+
+
 
 group :development, :test do 
 	gem 'sqlite3'

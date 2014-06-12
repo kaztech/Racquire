@@ -69,6 +69,10 @@ GEM
       turbolinks
     json (1.8.1)
     jwt (1.0.0)
+    linkedin (0.4.7)
+      hashie (~> 2.0)
+      multi_json (~> 1.0)
+      oauth (~> 0.4)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -79,6 +83,7 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    oauth (0.4.7)
     oauth2 (0.9.4)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0)
@@ -88,6 +93,8 @@ GEM
     omniauth (1.2.1)
       hashie (>= 1.2, < 3)
       rack (~> 1.0)
+    omniauth-facebook (1.6.0)
+      omniauth-oauth2 (~> 1.1)
     omniauth-google-oauth2 (0.2.4)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.1)
@@ -176,8 +183,11 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
+  linkedin
   masonry-rails (~> 0.2.0)
   oauth2 (~> 0.9.4)
+  omniauth
+  omniauth-facebook
   omniauth-google-oauth2
   paperclip (~> 3.0)
   pg (~> 0.17.1)
