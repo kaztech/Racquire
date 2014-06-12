@@ -28,6 +28,8 @@ gem 'paperclip', '~> 3.0'
 gem 'masonry-rails', '~> 0.2.0'
 gem 'bcrypt-ruby','~> 3.1.5'
 
+gem 'oauth2', '~> 0.9.4'
+
 group :development, :test do 
 	gem 'sqlite3'
 end

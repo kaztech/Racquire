@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "recruiter" => "pages#recruiter" #creates recruiter path
   get "employer" => "pages#employer" #creates employer  path
   get "postings" => "pages#postings" #creates postings path
+  get "testing" => "pages#testing" #creates test path
 
 
   # The priority is based upon order of creation: first created -> highest priority.
