@@ -22,15 +22,16 @@
         <li><%= link_to "testing", testing_path %><li> 
         <li><%= link_to "Learn", learn_path %><li> 
 
-      <% if user_signed_in? %> Signed in as <%= current_user.name %>. Not you?
+        <% if user_signed_in? %> Signed in as <%= current_user.name %>. Not you?
         <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
         <% else %>
         <%= link_to "Sign up", new_user_registration_path %> or
         <%= link_to "Sign in", new_user_session_path %> 
-        <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %> 
-        <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-<% end %>
-      <% end %>
+        <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %>
+<!-- <%= link_to Signin with Facebook, user_omniauth_authorize_path(facebook) %> -->
+        <% end %>
+      
+    <% end %>
        
       </ul>
     </div><!-- /.navbar-collapse -->

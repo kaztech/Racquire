@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  devise_for :users , :controllers => {  :omniauth_callbacks => "omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   devise_for :models
   
   root "pages#home"
@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get "postings" => "pages#postings" #creates postings path
   get "testing" => "pages#testing" #creates test path
   get "learn" => "pages#learn" #creates learn path
-  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
