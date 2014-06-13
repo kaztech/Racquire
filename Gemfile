@@ -33,7 +33,7 @@ gem 'oauth2' , '~> 0.9.4'
 gem 'omniauth-google-oauth2'
 gem 'linkedin'
 gem 'omniauth-facebook'
-
+gem 'better_errors', '~> 1.1.0'
 
 
 
