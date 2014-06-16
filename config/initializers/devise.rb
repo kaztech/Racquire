@@ -22,7 +22,7 @@ Devise.setup do |config|
   require 'devise/orm/active_record'
 
   require 'omniauth-google-oauth2'
-  config.omniauth :google_oauth2, "444808604503-63h41vdr3ecbhp880g9v735jq92fhrhj", "ZlJhDfgVMDi-v4-MwY-5AUEi", { access_type: "offline", approval_prompt: "" }
+  config.omniauth :google_oauth2, "444808604503-63h41vdr3ecbhp880g9v735jq92fhrhj.apps.googleusercontent.com", "ZlJhDfgVMDi-v4-MwY-5AUEi", { access_type: "offline", approval_prompt: "" }
 
   require "omniauth-facebook" 
   config.omniauth :facebook, "571433682970557", "347ecf62f4fee7f6e3761b6c8787a6bd"
