@@ -25,8 +25,24 @@
 			<p style ="text-align:center; font-size:45px"><strong>OR</strong>
 			</p>
 			<div style="text-align:center">
-				 	<button class="btn btn-large btn-primary" type="submit">Login with LinkedIn</button>
-				 </div>
+          <p>
+           <button class="btn btn-large btn-primary" type="submit">
+           	<%= link_to "Login with Linkedin",user_omniauth_authorize_path(:linkedin) %>
+           	 </button>
+      </div>
+         </p>
+   
+          <p>
+      <div style="text-align:center">
+           <button class="btn btn-large btn-primary" type="submit">Login with Facebook</button>
+     </div>
+         </p>
+   
+           <p>
+      <div style="text-align:center">
+           <button class="btn btn-large btn-primary" type="submit">Login with Google</button>
+     </div>
+         </P>
 				
 		 </div>
 
