@@ -1,21 +1,22 @@
-<div class="jumbotron center"> 
-	<h1>Welcome to Racquire!</h1>
+<h1>Welcome to Racquire!</h1>
+  <div class="jumbotron center"> 
+  <p style="font-size:45px"><strong>Refer your <em>friends</em>.</strong></p>
+  <p style="font-size:45px"><strong>If they get <em>hired</em>,</strong></p>
+  <p style="font-size:45px"><strong>You get <em>paid</em>!</strong></p>
 
-	<% if user_signed_in? %>
-	Where networks become net worth!
-<% else %>
+
 
 <p style="font-size:40px">
-	Are you...
+  Are you...
 </p>
 
-		<p>
-			<%=link_to "Looking to recruit from your network?", new_user_session_path, class: "btn btn-primary btn-lg" %>
-		</p>
-		<p style="font-size: 30px"><strong> OR</strong></p>
-		 <p>
-		 	<%=link_to "An Employer wanting to use service?", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-		</p>
-	<%end%>
+    <p>
+      <%=link_to "Looking to recruit from your network?", recruiter_path, class: "btn btn-primary btn-lg btn-responsive" %>
+    </p>
+    <p style="font-size: 30px"><strong> OR</strong></p>
+     <p>
+      <%=link_to "An Employer wanting to use service?", employer_path, class: "btn btn-primary btn-lg" %>
+    </p>
+  
 
-</div>
+</div> 
