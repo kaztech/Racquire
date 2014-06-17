@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get "postings" => "pages#postings" #creates postings path
   get "testing" => "pages#testing" #creates test path
   get "learn" => "pages#learn" #creates learn path
+  get "recruiter_dash" => "pages#recruiter_dash" #creates recruiter_dash path
+  get "employer_dash" => "pages#employer_dash" #creates employer_dash path
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
