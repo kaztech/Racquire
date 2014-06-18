@@ -6,7 +6,7 @@
 			<div class="col-md-6">
 				<!-- Add in Member SignIN flow -->
 				<h2 class="form-signin-heading">Existing Members</h2>
-			<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+				<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 			  <%= devise_error_messages! %>
 
 			  	<div class="form-group">
@@ -30,15 +30,39 @@
 			</div>
 
 		<!-- Add in Member SignUP flow -->
-			<div class="col-md-6">
-			<h2 class="form-signin-heading">New Members</h2>	
- 			  
+
+
 			<% end %>
+			<div class="col-md-6">
+			<h2 class="form-signin-heading">New Members</h2>
+			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+			<%= devise_error_messages! %>
+
+			  <div class="form-group">
+			  <%= f.label :email %>
+			  <%= f.email_field :email, autofocus: true, class: "form-control" %>
+				</div>
+
+			  <div class="form-group">
+			  	<%= f.label :password %>
+			  	<%= f.password_field :password, class: "form-control" %>
+				</div>
+
+			  <div class="form-group">
+			  	<%= f.label :password_confirmation %>
+			  	<%= f.password_field :password_confirmation, class: "form-control" %>
+			  </div>
+  
+
+			  <div class="form-group">
+			  	<%= f.submit "Sign up", class: "btn btn-primary" %>
+			  </div>
+
 		</div>
 	</div> <!-- End Panel Body -->
 		<div class="panel-footer">
 		<%= render "devise/shared/links" %>
 		</div>
 </div> <!-- End Panel Panel -->
-
+<% end %>
 <!--Trying to rework signin path to incorporate our formatting - Everything above is what was in Devise 1-32 -->
