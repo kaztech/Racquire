@@ -23,3 +23,29 @@
     <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %><br />
   <% end -%>
 <% end -%>
+
+
+			<div style="text-align:center">
+          <p>
+           <button class="btn btn-large btn-primary" type="submit">
+           	<%= link_to "Login with Linkedin",user_omniauth_authorize_path(:linkedin) %>
+           	 </button>
+      </div>
+         </p>
+   
+          <p>
+      <div style="text-align:center">
+           <button class="btn btn-large btn-primary" type="submit">Login with Facebook</button>
+     </div>
+         </p>
+   
+           <p>
+      <div style="text-align:center">
+           <button class="btn btn-large btn-primary" type="submit">Login with Google</button>
+     </div>
+         </P>
+				
+		 </div>
+
+
+		</div>

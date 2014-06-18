@@ -2,31 +2,43 @@
 	<div class="panel-heading">
 	<h2>Sign in</h2>
 	</div>
-		<div class="panel-body">
+		<div class="panel-body"> <!-- Begin Panel Body -->
+			<div class="col-md-6">
+				<!-- Add in Member SignIN flow -->
+				<h2 class="form-signin-heading">Existing Members</h2>
 			<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 			  <%= devise_error_messages! %>
 
-			  <div class="form-group">
-			  <%= f.label :email %>
-			  <%= f.email_field :email, autofocus: true, class: "form-control" %>
-			</div>
+			  	<div class="form-group">
+			  	<%= f.label :email %>
+			  	<%= f.email_field :email, autofocus: true, class: "form-control" %>
+					</div>
 
-			  <div class="form-group">
+			  	<div class="form-group">
 			  	<%= f.label :password %>
 			  	<%= f.password_field :password, class: "form-control" %>
-			</div>
+					</div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+  				<% if devise_mapping.rememberable? -%>
+    			<div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+  				<% end -%>
 
   				<div class="form-group">
-			  		<%= f.submit "Sign in", class: "btn btn-primary" %>
+			  	<%= f.submit "Sign in", class: "btn btn-primary" %>
   				</div>
+ <!-- Look to add in the "Forgot your password" link before the end of the panel -->
 			</div>
+
+		<!-- Add in Member SignUP flow -->
+			<div class="col-md-6">
+			<h2 class="form-signin-heading">New Members</h2>	
+ 			  
 			<% end %>
-	</div>
-		<div class="panel-footer">
-	<%= render "devise/shared/links" %>
 		</div>
-</div>
+	</div> <!-- End Panel Body -->
+		<div class="panel-footer">
+		<%= render "devise/shared/links" %>
+		</div>
+</div> <!-- End Panel Panel -->
+
+<!--Trying to rework signin path to incorporate our formatting - Everything above is what was in Devise 1-32 -->
