@@ -7,6 +7,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :current_employer,   null: false, default: ""
       t.string :current_job_title,  null: false, default: ""
       t.string :skills,             null: false, default: ""
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at

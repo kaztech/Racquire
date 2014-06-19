@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   devise_for :employers
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+  
   devise_for :models
   
   root "pages#home"
