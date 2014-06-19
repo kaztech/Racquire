@@ -28,6 +28,12 @@ ActiveRecord::Schema.define(version: 20140619174720) do
     t.datetime "updated_at"
     t.string   "provider"
     t.string   "uid"
+    t.string   "company_name"
+    t.string   "contact_name"
+    t.string   "contact_phone"
+    t.string   "current_employer"
+    t.string   "current_job_title"
+    t.string   "skills"
   end
 
   add_index "employers", ["email"], name: "index_employers_on_email", unique: true

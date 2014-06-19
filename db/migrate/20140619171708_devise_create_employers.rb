@@ -6,7 +6,10 @@ class DeviseCreateEmployers < ActiveRecord::Migration
       t.string :contact_phone,      null: false, default: ""
       t.string :company_name,       null: false, default: ""
       t.string :email,              null: false, default: ""
-      t.string :encrypted_password, null: false, default: ""
+      t.string :current_employer,   null: false, default: ""
+      t.string :current_job_title,  null: false, default: ""
+      t.string :skills,             null: false, default: ""
+
 
       ## Recoverable
       t.string   :reset_password_token
