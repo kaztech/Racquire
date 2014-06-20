@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(version: 20140620014814) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string "contact_name"
+    t.string "contact_phone"
+    t.string "company_name"
   end
 
   add_index "employers", ["email"], name: "index_employers_on_email", unique: true
