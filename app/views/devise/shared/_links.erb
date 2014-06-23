@@ -18,30 +18,27 @@
   <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
 <% end -%>
 
-<%- if devise_mapping.omniauthable? %>
-  <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %><br />
-  <% end -%>
-<% end -%>
-
-
-			<div style="text-align:center">
+			<div style="text-align:left">
           <p>
-           <button class="btn btn-large btn-primary" type="submit">
-           	<%= link_to "Login with Linkedin",user_omniauth_authorize_path(:linkedin) %>
+           <button class="btn btn-primary" type="submit">
+           	<%= link_to "Login with Linkedin", user_omniauth_authorize_path(:linkedin) %>
            	 </button>
       </div>
          </p>
    
           <p>
-      <div style="text-align:center">
-           <button class="btn btn-large btn-primary" type="submit">Login with Facebook</button>
+      <div style="text-align:left">
+           <button class="btn btn-primary" type="submit">
+           <%= link_to "Login with Facebook", user_omniauth_authorize_path(:facebook) %>
+         </button>
      </div>
          </p>
    
            <p>
-      <div style="text-align:center">
-           <button class="btn btn-large btn-primary" type="submit">Login with Google</button>
+      <div style="text-align:left">
+           <button class="btn btn-primary" type="submit">
+             <%= link_to "Login with Google", user_omniauth_authorize_path(:googleoath2) %>
+           </button>
      </div>
          </P>
 				
