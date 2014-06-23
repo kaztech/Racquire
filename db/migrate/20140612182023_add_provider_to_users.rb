@@ -5,5 +5,6 @@ class AddProviderToUsers < ActiveRecord::Migration
     add_column :users, :current_employer, :string
     add_column :users, :current_job_title, :string
     add_column :users, :skills, :string
+    add_column :users, :full_name, :string
   end
 end
