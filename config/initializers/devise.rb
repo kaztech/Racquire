@@ -21,8 +21,6 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
 
-
-
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for
@@ -231,11 +229,11 @@ Devise.setup do |config|
 
   config.sign_out_via = :get
 
-  config.omniauth :facebook, ENV["571433682970557"], ENV["347ecf62f4fee7f6e3761b6c8787a6bd"], { :scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
+  config.omniauth :facebook,"571433682970557","347ecf62f4fee7f6e3761b6c8787a6bd"
   
-  config.omniauth :linkedin, ENV["759vou9sd0bigh"], ENV["8QiZoARs6nqXjrwi"], { :scope => 'r_fullprofile r_emailaddress', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
+  config.omniauth :linkedin,"759vou9sd0bigh", "8QiZoARs6nqXjrwi"
   
-  config.omniauth :google_oauth2, ENV['444808604503-63h41vdr3ecbhp880g9v735jq92fhrhj.apps.googleusercontent.com'], ENV['ZlJhDfgVMDi-v4-MwY-5AUEi'], {}
+  config.omniauth :google_oauth2,"444808604503-63h41vdr3ecbhp880g9v735jq92fhrhj.apps.googleusercontent.com","ZlJhDfgVMDi-v4-MwY-5AUEi"
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting

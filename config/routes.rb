@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   devise_for :employers
-  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+  devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
   devise_for :models
   
   root "pages#home"
@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get "how_to_recruiter" => "pages#how_to_recruiter" #creates how_to_recruiter path
   get "how_to_employer" => "pages#how_to_employer" #creates how_to_employer path
   get "payments" => "pages#payments" #creates payments path
+
+  match '/profile/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
