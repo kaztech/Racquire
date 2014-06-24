@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20140624022656) do
     t.datetime "updated_at"
   end
 
-  add_index "models", ["email"], name: "index_admins_on_email", unique: true
-  add_index "models", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  add_index "models", ["email"], name: "index_models_on_email", unique: true
+  add_index "models", ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
 
   create_table "employers", force: true do |t|
     t.string   "email",                  default: "", null: false
