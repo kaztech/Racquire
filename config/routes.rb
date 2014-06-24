@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get "how_to_employer" => "pages#how_to_employer" #creates how_to_employer path
   get "payments" => "pages#payments" #creates payments path
 
-  match '/profile/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
+ 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
