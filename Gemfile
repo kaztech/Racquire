@@ -37,7 +37,7 @@ gem 'better_errors', '~> 1.1.0'
 gem 'binding_of_caller', '~> 0.7.2'
 gem 'omniauth-linkedin' 
 
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+#gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 gem 'nokogiri', '1.5.9'
 
