@@ -43,7 +43,7 @@ gem 'nokogiri', '1.5.9'
 
 
 group :development, :test do 
-	gem 'sqlite3'
+	gem 'sqlite3', '~> 1.3.9'
 end
 
 group :production do 

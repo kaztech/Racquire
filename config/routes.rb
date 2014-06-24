@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   
-  
-  mount RailsAdmin::Engine => '/rails_admin', as: 'rails_admin'
   devise_for :employers
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
   devise_for :models
-  
+  mount RailsAdmin::Engine => '/rails_admin', as: 'rails_admin'
+
   root "pages#home"
   get "recruiter" => "pages#recruiter" #creates recruiter path
   get "employer" => "pages#employer" #creates employer  path
