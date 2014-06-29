@@ -53,30 +53,64 @@
 
   <div class="col-md-6">
 
-    <div class="jumbotron"
+    <div class="jumbotron">
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="form-group">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name, autofocus: true, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name, autofocus: true, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, autofocus: true, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password %>
+            <%= f.password_field :password, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, class: "form-control" %></div>
+
+          <div class="form-group">
+            <%= f.submit "Sign up", class: "btn btn-primary" %>
+          </div>
+          </div>
+      <% end %>
 
     <form class="form-signin">
       <h2 class="form-signin-heading">New Members</h2>
       <p>
-        <input type="text" class="form-control" placeholder="Name">
+        <input type="text" class="form-control" placeholder="First Name" name="first_name">
       </p>
       <p>
-        <input type="text" class="form-control" placeholder="Email address">
+        <input type="text" class="form-control" placeholder="Last Name" name="last_name">
       </p>
       <p>
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="text" class="form-control" placeholder="Email address" name="email">
       </p>
       <p>
-        <input type="password" class="form-control" placeholder="Confirm Password">
+        <input type="password" class="form-control" placeholder="Password" name="password">
       </p>
       <p>
-        <input type="text" class="form-control" placeholder="Current Employer">
+        <input type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation">
       </p>
       <p>
-        <input type="text" class="form-control" placeholder="Current Job Title">
+        <input type="text" class="form-control" placeholder="Current Employer" name="current_employer">
       </p>
       <p>
-        <input type="text" class="form-control" placeholder="Skills">
+        <input type="text" class="form-control" placeholder="Current Job Title" name="current_job_title">
+      </p>
+      <p>
+        <input type="text" class="form-control" placeholder="Skills" name="skills">
       </p>
       <label class="checkbox-center">
         <input type="checkbox" value="remember-me"> Remember me
