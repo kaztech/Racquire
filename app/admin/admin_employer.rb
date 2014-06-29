@@ -1,4 +1,4 @@
-ActiveAdmin.register AdminEmployer do
+#ActiveAdmin.register AdminEmployer do
 
   
   # See permitted parameters documentation:
@@ -14,4 +14,4 @@ ActiveAdmin.register AdminEmployer do
   #  permitted
   # end
   
-end
+#end
