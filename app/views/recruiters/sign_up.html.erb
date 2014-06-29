@@ -1,0 +1,93 @@
+<h1>Recruiter</h1>
+<p>We are working on our Racquire App</p>
+
+<div class="row-fluid">
+
+  <div class="col-md-6">
+
+    <div class="jumbotron">
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Existing Members</h2>
+        <p>
+          <input type="text" class="form-control" placeholder="Email address">
+        </p>
+        <p>
+          <input type="password" class="form-control" placeholder="Password">
+        </p>
+        <label class="checkbox-center">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+
+        <p>
+          <%=link_to "Login", new_user_session_path, class: "btn btn-primary btn-lg" %>
+        </p>
+
+      </form>
+      <p style ="text-align:center; font-size:45px"><strong>OR</strong>
+      </p>
+      <div style="text-align:center">
+        <p>
+          <button class="btn btn-large btn-primary" type="submit">
+            <%= link_to "Login with Linkedin",user_omniauth_authorize_path(:linkedin) %>
+          </button>
+      </div>
+      </p>
+
+      <p>
+      <div style="text-align:center">
+        <button class="btn btn-large btn-primary" type="submit">Login with Facebook</button>
+      </div>
+      </p>
+
+      <p>
+      <div style="text-align:center">
+        <button class="btn btn-large btn-primary" type="submit">Login with Google</button>
+      </div>
+      </P>
+
+    </div>
+
+  </div>
+
+
+  <div class="col-md-6">
+
+    <div class="jumbotron"
+
+    <form class="form-signin">
+      <h2 class="form-signin-heading">New Members</h2>
+      <p>
+        <input type="text" class="form-control" placeholder="Name">
+      </p>
+      <p>
+        <input type="text" class="form-control" placeholder="Email address">
+      </p>
+      <p>
+        <input type="password" class="form-control" placeholder="Password">
+      </p>
+      <p>
+        <input type="password" class="form-control" placeholder="Confirm Password">
+      </p>
+      <p>
+        <input type="text" class="form-control" placeholder="Current Employer">
+      </p>
+      <p>
+        <input type="text" class="form-control" placeholder="Current Job Title">
+      </p>
+      <p>
+        <input type="text" class="form-control" placeholder="Skills">
+      </p>
+      <label class="checkbox-center">
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+      <div>
+        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+      </div>
+    </form>
+
+  </div>
+
+</div>
+
+</div>

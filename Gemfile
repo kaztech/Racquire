@@ -45,6 +45,8 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 
 group :development, :test do 
 	gem 'sqlite3', '~> 1.3.9'
+	gem 'rspec-rails'
+	gem 'capybara'
 end
 
 group :production do 

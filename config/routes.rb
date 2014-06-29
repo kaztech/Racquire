@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
   
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-  devise_for :employers
+  # devise_for :admin_users, ActiveAdmin::Devise.config
+  # ActiveAdmin.routes(self)
+  # devise_for :employers
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
-  devise_for :models
+  # devise_for :models
 
 
-  root "pages#home"
+  root 'pages#home'
+
+  get 'recruiters/sign_up' => 'recruiters#sign_up'
+  get 'employers/sign_up' => 'recruiters#sign_up'
+
   get "recruiter" => "pages#recruiter" #creates recruiter path
   get "employer" => "pages#employer" #creates employer  path
   get "postings" => "pages#postings" #creates postings path
