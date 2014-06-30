@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get 'recruiters/sign_up' => 'recruiters#sign_up'
-  get 'employers/sign_up' => 'recruiters#sign_up'
+  get 'employers/sign_up' => 'employers#sign_up'
 
   get "recruiter" => "pages#recruiter" #creates recruiter path
   get "employer" => "pages#employer" #creates employer  path

@@ -1,5 +1,5 @@
 <h1>Employer</h1>
-<p>We are working on our Racqurie App</p>
+<p>We are working on our Racquire App</p>
 
 <div class="row-fluid">
 
@@ -8,7 +8,7 @@
     <div class="jumbotron">
 
       <form class="form-signin">
-        <h2 class="form-signin-heading">Existing Employer</h2>
+        <h2 class="form-signin-heading">Existing Employers</h2>
         <p>
           <input type="text" class="form-control" placeholder="Email address">
         </p>
@@ -18,53 +18,73 @@
         <label class="checkbox-center">
           <input type="checkbox" value="remember-me"> Remember me
         </label>
-        <div>
-          <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-        </div>
-      </form>
 
+        <p>
+          <%=link_to "Login", new_user_session_path, class: "btn btn-primary btn-lg" %>
+        </p>
+
+      </form>
+      <p style ="text-align:center; font-size:45px"><strong>OR</strong>
+      </p>
+      <div style="text-align:center">
+        <p>
+          <button class="btn btn-large btn-primary" type="submit">
+            <%= link_to "Login with Linkedin",user_omniauth_authorize_path(:linkedin) %>
+          </button>
+      </div>
+      </p>
+
+      <p>
+      <div style="text-align:center">
+        <button class="btn btn-large btn-primary" type="submit">Login with Facebook</button>
+      </div>
+      </p>
+
+      <p>
+      <div style="text-align:center">
+        <button class="btn btn-large btn-primary" type="submit">Login with Google</button>
+      </div>
+      </P>
 
     </div>
 
-
   </div>
-
 
 
   <div class="col-md-6">
 
-    <div class="jumbotron"
+    <div class="jumbotron">
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+        <%= f.hidden_field :type, :value => @type %>
+        <div class="form-group">
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name, autofocus: true, class: "form-control" %>
+        </div>
 
-    <form class="form-signin">
-      <h2 class="form-signin-heading">New Employer</h2>
-      <p>
-        <input type="text" class="form-control" placeholder="Contact Name">
-      </p>
-      <p>
-        <input type="text" class="form-control" placeholder="Contact Phone">
-      </p>
-      <p>
-        <input type="text" class="form-control" placeholder="Company Name">
-      </p>
-      <p>
-        <input type="text" class="form-control" placeholder="Email address">
-      </p>
-      <p>
-        <input type="password" class="form-control" placeholder="Password">
-      </p>
-      <p>
-        <input type="password" class="form-control" placeholder="Confirm Password">
-      </p>
-      <label class="checkbox-center">
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-      <div>
-        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-      </div>
-    </form>
+        <div class="form-group">
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name, autofocus: true, class: "form-control" %>
+        </div>
 
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password %>
+          <%= f.password_field :password, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, class: "form-control" %></div>
+
+        <div class="form-group">
+          <%= f.submit "Sign up", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
   </div>
-
-</div>
-
 </div>
