@@ -1,3 +1,3 @@
-class Employer < User
+class Recruiter < User
 
 end
