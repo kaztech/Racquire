@@ -1,0 +1,3 @@
+class RecruiterDashboardController < ApplicationController
+
+end

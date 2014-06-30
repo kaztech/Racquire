@@ -1,0 +1,43 @@
+<h1><%= current_user.full_name %> </h1>
+
+<p><strong>Total Earned: $3000</strong></p>
+<p><strong>Score: ****</strong></p>
+<p><strong>Referral ID: 1234135</strong></P>
+<p>
+  <%=link_to "Job Postings", postings_path, class: "btn btn-primary btn-lg" %>
+</p>
+<p><strong>Referrals Hired: 3</strong></p>
+
+
+<div class="table-responsive">
+
+
+  <table class="table">
+    <th colspan="3">
+      <tr>
+        <td><strong>Name/Position</strong></td>
+        <td><strong>Date Hired</strong></td>
+        <td><strong>Amount Due</strong></td>
+        </th>
+
+      <tr>
+        <td>John Doe - Developer - Google</td>
+        <td>09-13-13</td>
+        <td>$900</td>
+      </tr>
+    <td>Jane Smith - Analyst - Twitter</td>
+    <td>10-24-13</td>
+    <td>$600</td>
+    <tr>
+      <td>Sergei Federov - Marketing Manager - Snapchat</td>
+      <td>11-05-13</td>
+      <td>$250</td>
+    </tr>
+
+
+  </table>
+</div>
+
+
+<p style="text-align:center">
+  <a href="www.espn.com">Invite Friends to Recruit</a></p>

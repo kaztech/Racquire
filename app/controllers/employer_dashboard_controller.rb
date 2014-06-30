@@ -1,0 +1,3 @@
+class EmployerDashboardController < ApplicationController
+
+end

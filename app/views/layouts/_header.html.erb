@@ -20,16 +20,20 @@
         <li><%= link_to "Employer", employer_path %><li> 
         <li><%= link_to "Postings", postings_path %><li> 
         <li><%= link_to "testing", testing_path %><li> 
-        <li><%= link_to "Learn", learn_path %><li> 
-        
-        <% if user_signed_in? %>         
-        <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
-        <% else%>
-        <%= link_to "Login", new_user_session_path %>
+        <li><%= link_to "Learn", learn_path %><li>
+
+        <% if user_signed_in? && current_user.type == 'Recruiter' %>
+          <li><%= link_to "Dashboard", 'recruiter_dash'%></li>
+        <% elsif user_signed_in? && current_user.type == 'Employer' %>
+          <li><%= link_to "Dashboard", 'employer_dash'%></li>
         <% end %>
-        
-   
-       
+
+        <% if user_signed_in? %>         
+          <li><%= link_to "Sign out", destroy_user_session_path,:method => :delete %></li>
+        <% else%>
+          <li><%= link_to "Login", new_user_session_path %></li>
+        <% end %>
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>

@@ -12,13 +12,16 @@ Rails.application.routes.draw do
   get 'recruiters/sign_up' => 'recruiters#sign_up'
   get 'employers/sign_up' => 'employers#sign_up'
 
+  get 'recruiter_dash' => 'recruiter_dashboard#index'
+  get 'employer_dash' => 'employer_dashboard#index'
+
   get "recruiter" => "pages#recruiter" #creates recruiter path
   get "employer" => "pages#employer" #creates employer  path
   get "postings" => "pages#postings" #creates postings path
   get "testing" => "pages#testing" #creates test path
   get "learn" => "pages#learn" #creates learn path
-  get "recruiter_dash" => "pages#recruiter_dash" #creates recruiter_dash path
-  get "employer_dash" => "pages#employer_dash" #creates employer_dash path
+  # get "recruiter_dash" => "pages#recruiter_dash" #creates recruiter_dash path
+  # get "employer_dash" => "pages#employer_dash" #creates employer_dash path
   get "how_to_recruiter" => "pages#how_to_recruiter" #creates how_to_recruiter path
   get "how_to_employer" => "pages#how_to_employer" #creates how_to_employer path
   get "payments" => "pages#payments" #creates payments path
